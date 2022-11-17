@@ -1,0 +1,13 @@
+class Solution:
+    def isPalindrome(self, s: str) -> bool:
+        onlyalpha = []
+        for char in s:
+            if char.isalpha() or char.isnumeric():
+                onlyalpha.append(char)
+        onlyalpha_list = ''.join(onlyalpha)
+        onlyalpha_list = onlyalpha_list.lower()
+            
+        if onlyalpha_list == onlyalpha_list[::-1]:
+            return True
+        else: 
+            return False
