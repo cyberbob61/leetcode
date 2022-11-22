@@ -1,0 +1,9 @@
+class Solution:
+    def singleNumber(self, nums: List[int]) -> int:
+        dct = {}
+        for item in nums:
+            dct[item] = dct.get(item, 0) + 1
+        
+        for value, count in dct.items():
+            if count == 1:
+                return value
